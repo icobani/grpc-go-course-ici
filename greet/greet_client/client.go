@@ -38,7 +38,6 @@ func doUnary(c greetpb.GreetServiceClient) {
 			LastName:  "ÇOBANİ",
 		},
 	}
-
 	res, err := c.Greet(context.Background(), req)
 	if err != nil {
 		log.Fatalf("Error while caling greet RPC : %v", err)
