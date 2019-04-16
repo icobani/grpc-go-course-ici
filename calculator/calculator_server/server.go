@@ -20,13 +20,13 @@ import (
 type server struct{}
 
 func (*server) Sum(ctx context.Context, req *calculatorpb.SumRequest) (*calculatorpb.SumResponse, error) {
-	fmt.Printf("Received Sum RPC: %v\n", req)
 	firstNumber := req.FirstNumber
 	secondNumber := req.SecondNumber
 	sum := firstNumber + secondNumber
 	res := &calculatorpb.SumResponse{
 		SumResult: sum,
 	}
+	fmt.Printf("Received Sum RPC: %v\nResult: %v\n", req, res)
 	return res, nil
 }
 
