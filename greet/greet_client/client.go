@@ -18,7 +18,7 @@ import (
 
 func main() {
 	fmt.Println("Hello I m a client !")
-	cc, err := grpc.Dial("localhost:50051", grpc.WithInsecure())
+	cc, err := grpc.Dial("bigdata.b1db.com:50051", grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("could not connect : %v", err)
 	}
