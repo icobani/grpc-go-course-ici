@@ -24,6 +24,8 @@ func main() {
 	}
 
 	defer cc.Close()
+	c := calculatorpb.NewCalculatorServiceClient(cc)
+	dounary(c)
 }
 
 func dounary(c calculatorpb.CalculatorServiceClient) {
